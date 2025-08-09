@@ -1,0 +1,13 @@
+[project]
+name = "safe-builtins"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "result",
+    "typing-extensions>=4.14.1",
+]
+
+[tool.uv.sources]
+result = { git = "https://github.com/montasaurus/result" }
