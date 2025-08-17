@@ -11,7 +11,6 @@ from typing import (
     Literal,
 )
 
-# TODO: get types from _typeshed
 if TYPE_CHECKING:
     from _typeshed import (
         FileDescriptorOrPath,
@@ -26,8 +25,6 @@ from result import (
     Result,
     Ok,
     Err,
-    is_err,
-    is_ok
 )
 
 from io import (
@@ -107,17 +104,3 @@ def safe_len(obj: Sized, /) -> Result[int, OverflowError]:
 
     except OverflowError as e:
         return Err(e)
-
-
-def test_safe_open():
-    # BUG: why pyright flag this as error?
-    return safe_open("nonexistent_file", "r").err_value
-
-
-# TODO:create something like this, modify the result library
-def test_safe_open_2():
-    match safe_open("nonexistent_file", "r"):
-        case Err(e).match_err(FileNotFoundError):
-            # handle err
-
-print(test_safe_open())
