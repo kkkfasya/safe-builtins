@@ -18,10 +18,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 
 dependencies = [
-    "pytest>=8.4.1",
     "result",
-    "ruff>=0.12.10",
-    "typing-extensions>=4.14.1",
 ]
 
 [build-system]
@@ -40,4 +37,10 @@ testpaths = ["tests"]
 
 [tool.uv.sources]
 result = { git = "https://github.com/montasaurus/result" }
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+    "ruff>=0.12.10",
+]
 

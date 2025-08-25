@@ -11,3 +11,6 @@ wheels/
 
 # do you need this?
 .python-version 
+
+.env
+.secrets

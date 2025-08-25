@@ -113,18 +113,22 @@ name = "safe-builtins"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "pytest" },
     { name = "result" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
     { name = "ruff" },
-    { name = "typing-extensions" },
 ]
 
 [package.metadata]
-requires-dist = [
+requires-dist = [{ name = "result", git = "https://github.com/montasaurus/result" }]
+
+[package.metadata.requires-dev]
+dev = [
     { name = "pytest", specifier = ">=8.4.1" },
-    { name = "result", git = "https://github.com/montasaurus/result" },
     { name = "ruff", specifier = ">=0.12.10" },
-    { name = "typing-extensions", specifier = ">=4.14.1" },
 ]
 
 [[package]]

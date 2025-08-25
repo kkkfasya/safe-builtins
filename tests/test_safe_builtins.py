@@ -1,5 +1,9 @@
 from result import Ok, Err
 
+# Co-authored-by: Qwen-Coder <qwen-coder@alibabacloud.com>
+# shoutout to qwen for helping me writing unittest, she knows i hate it
+# i'll put the credit here instead of in commit message (she put it there by herself without my consent)
+
 # Import all safe built-ins
 from safe_builtins import (
     safe_abs, safe_all, safe_any, safe_ascii, safe_bin,

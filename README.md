@@ -8,12 +8,16 @@ Python's builtins wrapped inside rust-like [Result](https://github.com/montasaur
 
 ## Installation
 
-Install the package directly from the GitHub `main` branch using `uv`:
+Install the package from PyPi using `uv`:
 
 ```bash
-uv pip install git+https://github.com/kkkfasya/safe-builtins.git
+uv add safe-builtins
 ```
+or install it directly from `master` branch on github for the latest update
 
+```bash
+uv add git+https://github.com/kkkfasy/safe-builtins
+```
 ## Summary
 
 This library provides safe wrappers for Python's built-in functions using the `Result` type from the [montasaurus/result](https://github.com/montasaurus/result) library. Instead of raising exceptions, these functions return a `Result` that either contains the successful value (`Ok`) or the caught exception (`Err`).
