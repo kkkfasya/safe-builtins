@@ -1,6 +1,6 @@
 [project]
 name = "safe-builtins"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python builtins wrapped with rust-like Result"
 keywords = ["safe", "builtins", "utils"]
 authors = [{ name = "Kamal Fasya", email = "kamalfasya01@gmail.com" }]

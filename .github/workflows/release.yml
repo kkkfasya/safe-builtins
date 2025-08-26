@@ -37,7 +37,14 @@ jobs:
       
       - name: Update package version based on recently pushed git tags version
         run: uv version ${{ github.ref_name }}
-        
+
+      - name: Commit version change 
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: bump version to ${{ github.ref_name }}"
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+      
       - name: Build package
         run: uv build
 
