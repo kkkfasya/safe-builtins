@@ -415,7 +415,7 @@ wheels = [
 [[package]]
 name = "result"
 version = "0.19.0"
-source = { git = "https://github.com/montasaurus/result#59cd2fb7b57e4851a7054917fbd03c4c8f68a62f" }
+source = { git = "https://github.com/kkkfasya/result#d1a5140c1378cf4aa329fa75a875a4ef9649541c" }
 
 [[package]]
 name = "rpds-py"
@@ -594,7 +594,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "result", git = "https://github.com/montasaurus/result" }]
+requires-dist = [{ name = "result", git = "https://github.com/kkkfasya/result" }]
 
 [package.metadata.requires-dev]
 dev = [

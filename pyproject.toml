@@ -36,7 +36,7 @@ addopts = ["--tb=short"]
 testpaths = ["tests"]
 
 [tool.uv.sources]
-result = { git = "https://github.com/montasaurus/result" }
+result = { git = "https://github.com/kkkfasya/result" }
 
 [dependency-groups]
 dev = [
