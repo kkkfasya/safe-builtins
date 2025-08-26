@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Validate required inputs
         run: |
-          test -n "${{ secrets.AWS_ACCESS_KEY_ID }}" || { echo "::error::AWS_ACCESS_KEY_ID"; exit 1; }
+          test -n "${{ secrets.PYPI_TOKEN }}" || { echo "::error::PYPI_TOKEN"; exit 1; }
   pypi:
     needs: check_secret
     name: Publish to PyPI
