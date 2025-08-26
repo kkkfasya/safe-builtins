@@ -42,5 +42,6 @@ result = { git = "https://github.com/montasaurus/result" }
 dev = [
     "pytest>=8.4.1",
     "ruff>=0.12.10",
+    "pytest-mypy-plugins>=3.2.0",
 ]
 
