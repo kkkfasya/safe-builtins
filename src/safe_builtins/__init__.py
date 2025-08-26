@@ -1,4 +1,5 @@
 from .main import (
+    safe_hasattr,
     safe_abs,
     safe_aiter,
     safe_all,
@@ -61,6 +62,7 @@ from .main import (
     safe_zip,
     safe_import,
     safe_bool,
+    safe_print,
 )
 
 __all__ = [
@@ -126,6 +128,8 @@ __all__ = [
     "safe_zip",
     "safe_import",
     "safe_bool",
+    "safe_print",
+    "safe_hasattr",
 ]
 
 __version__ = "0.1.0"

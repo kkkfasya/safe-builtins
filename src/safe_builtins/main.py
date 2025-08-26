@@ -1,6 +1,4 @@
-from result import (
-    as_result
-)
+from result import as_result
 
 safe_abs = as_result(ValueError, TypeError)(abs)
 safe_aiter = as_result(TypeError)(aiter)
@@ -46,15 +44,25 @@ safe_object = as_result(TypeError)(object)
 safe_oct = as_result(TypeError)(oct)
 
 safe_open = as_result(
-        FileNotFoundError,
-        IsADirectoryError,
-        NotADirectoryError,
-        PermissionError,
-        FileExistsError,
-        OSError,
-        ValueError,
-        TypeError,
-    )(open)
+    FileNotFoundError,
+    IsADirectoryError,
+    NotADirectoryError,
+    PermissionError,
+    FileExistsError,
+    OSError,
+    ValueError,
+    TypeError,
+)(open)
+
+safe_print = as_result(
+    TypeError,
+    UnicodeError,
+    ValueError,
+    OSError,
+    IOError,
+)(print)
+
+safe_hasattr = as_result(TypeError, ValueError)(hasattr)
 
 safe_ord = as_result(TypeError, ValueError)(ord)
 safe_bool = as_result(TypeError)(bool)
@@ -63,7 +71,7 @@ safe_range = as_result(TypeError, ValueError)(range)
 safe_reversed = as_result(TypeError)(reversed)
 safe_round = as_result(TypeError)(round)
 safe_set = as_result(TypeError)(set)
-safe_setattr = as_result(TypeError, AttributeError)(setattr)
+safe_setattr = as_result(TypeError, AttributeError, ValueError)(setattr)
 safe_slice = as_result(TypeError)(slice)
 safe_sorted = as_result(TypeError)(sorted)
 safe_staticmethod = as_result(TypeError)(staticmethod)
@@ -75,4 +83,3 @@ safe_type = as_result(TypeError)(type)
 safe_vars = as_result(TypeError)(vars)
 safe_zip = as_result(TypeError)(zip)
 safe_import = as_result(ImportError, ModuleNotFoundError)(__import__)
-
