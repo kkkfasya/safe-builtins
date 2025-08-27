@@ -17,6 +17,13 @@ or install it directly from `master` branch on github for the latest update
 ```bash
 uv add git+https://github.com/kkkfasy/safe-builtins
 ```
+
+> [!WARNING]
+> Since `uv` doesnt support downloading transitive dependency from custom registry (in this case github), you need to run 
+```bash
+uv add git+https://github.com/kkkfasy/result
+```
+
 ## Summary
 
 This library provides safe wrappers for Python's built-in functions using the `Result` type from the [montasaurus/result](https://github.com/montasaurus/result) library. Instead of raising exceptions, these functions return a `Result` that either contains the successful value (`Ok`) or the caught exception (`Err`).
