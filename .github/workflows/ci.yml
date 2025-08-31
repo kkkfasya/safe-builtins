@@ -7,6 +7,10 @@ on:
     branches:
       - master
 
+    paths:
+      - src/**
+      - tests/**
+
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -23,6 +23,7 @@ uv add git+https://github.com/kkkfasy/safe-builtins
 ```bash
 uv add git+https://github.com/kkkfasy/result
 ```
+> you dont need to run this if you install from github directly
 
 ## Summary
 

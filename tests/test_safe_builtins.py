@@ -4,6 +4,9 @@ from result import Ok, Err
 # shoutout to qwen for helping me writing unittest, she knows i hate it
 # i'll put the credit here instead of in commit message (she put it there by herself without my consent)
 
+# NOTE: i dont use Err.match_err and Ok.match_value because i want the user of this library
+# to be able to use this even without my modified version of Result library
+
 # Import all safe built-ins
 from safe_builtins import (
     safe_abs,
