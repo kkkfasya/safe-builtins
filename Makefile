@@ -1,4 +1,4 @@
-.PHONY: lint format fmt test
+.PHONY: lint format fmt test all
 
 lint:
 	uv run ruff check .
@@ -11,3 +11,4 @@ fmt: format
 test:
 	uv run pytest
 
+all: lint format test
