@@ -28,6 +28,10 @@ jobs:
         run: test -n "${{ secrets.PYPI_TOKEN }}" || { echo "::error::Missing PYPI_TOKEN"; exit 1; }
 
       - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
       - uses: astral-sh/setup-uv@v3
         with:
           version: "0.8.8"
@@ -44,6 +48,7 @@ jobs:
           message: "chore: bump version to ${{ github.ref_name }}"
           committer_name: GitHub Actions
           committer_email: actions@github.com
+          pull: '--rebase --autostash'
       
       - name: Build package
         run: uv build
